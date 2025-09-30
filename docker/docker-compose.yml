@@ -1,0 +1,22 @@
+
+name: next_with_tailwind_app
+
+services:
+  app:
+    image: next_with_tailwind:dev
+    container_name: next_with_tailwind_app
+    build:
+      context: ..
+      dockerfile: ./docker/Dockerfile
+    restart: no
+    volumes:
+      - ../codes:/var/www/html
+    ports:
+      - "5176:5176"
+    networks:
+      - next_with_tailwind
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+networks:
+  next_with_tailwind:
+    driver: bridge
