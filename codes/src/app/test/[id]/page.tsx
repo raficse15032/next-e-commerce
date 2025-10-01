@@ -211,13 +211,13 @@ searchParams: ${JSON.stringify(searchParams, null, 2)}`}
                   <h4 className="font-bold mb-3 text-blue-600">Dynamic ID API</h4>
                   <div className="space-y-2 text-sm">
                     <div className="font-mono bg-gray-100 p-2 rounded">
-                      GET /api/test/{id}
+                      GET /api/test/item/{id}
                     </div>
                     <div className="text-gray-600">
                       Test with current ID parameter
                     </div>
                     <button 
-                      onClick={() => window.open(`/api/test/${id}?fields=name,category&include=details`, '_blank')}
+                      onClick={() => window.open(`/api/test/item/${id}?fields=name,category&include=details`, '_blank')}
                       className="btn-secondary text-xs w-full"
                     >
                       Try with ID: {id}
@@ -230,13 +230,13 @@ searchParams: ${JSON.stringify(searchParams, null, 2)}`}
                   <h4 className="font-bold mb-3 text-purple-600">Category API</h4>
                   <div className="space-y-2 text-sm">
                     <div className="font-mono bg-gray-100 p-2 rounded">
-                      GET /api/test/[category]/[id]
+                      GET /api/test/category/[category]/[id]
                     </div>
                     <div className="text-gray-600">
                       Test with category and ID
                     </div>
                     <button 
-                      onClick={() => window.open(`/api/test/electronics/${id}?sort=price&order=desc&limit=5`, '_blank')}
+                      onClick={() => window.open(`/api/test/category/electronics/${id}?sort=price&order=desc&limit=5`, '_blank')}
                       className="btn-secondary text-xs w-full"
                     >
                       Electronics + {id}
@@ -261,10 +261,10 @@ searchParams: ${JSON.stringify(searchParams, null, 2)}`}
                   <div>
                     <h4 className="font-medium mb-2 text-blue-600">Dynamic Routes</h4>
                     <ul className="space-y-1 text-gray-700">
-                      <li>• <code className="bg-white px-2 py-1 rounded">GET /api/test/[id]</code> - Get item by ID</li>
-                      <li>• <code className="bg-white px-2 py-1 rounded">PUT /api/test/[id]</code> - Update item</li>
-                      <li>• <code className="bg-white px-2 py-1 rounded">DELETE /api/test/[id]</code> - Delete item</li>
-                      <li>• <code className="bg-white px-2 py-1 rounded">GET /api/test/[cat]/[id]</code> - Category item</li>
+                      <li>• <code className="bg-white px-2 py-1 rounded">GET /api/test/item/[id]</code> - Get item by ID</li>
+                      <li>• <code className="bg-white px-2 py-1 rounded">PUT /api/test/item/[id]</code> - Update item</li>
+                      <li>• <code className="bg-white px-2 py-1 rounded">DELETE /api/test/item/[id]</code> - Delete item</li>
+                      <li>• <code className="bg-white px-2 py-1 rounded">GET /api/test/category/[cat]/[id]</code> - Category item</li>
                     </ul>
                   </div>
                 </div>

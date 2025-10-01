@@ -39,7 +39,7 @@ export async function GET(
       metadata: {
         timestamp: new Date().toISOString(),
         method: request.method,
-        route: `/api/test/${id}`
+        route: `/api/test/item/${id}`
       }
     };
 
@@ -91,7 +91,7 @@ export async function PUT(
       metadata: {
         timestamp: new Date().toISOString(),
         method: request.method,
-        route: `/api/test/${id}`
+        route: `/api/test/item/${id}`
       }
     };
 
@@ -134,7 +134,7 @@ export async function DELETE(
       metadata: {
         timestamp: new Date().toISOString(),
         method: request.method,
-        route: `/api/test/${id}`,
+        route: `/api/test/item/${id}`,
         forced: force
       }
     };
@@ -175,7 +175,7 @@ export async function PATCH(
       metadata: {
         timestamp: new Date().toISOString(),
         method: request.method,
-        route: `/api/test/${id}`
+        route: `/api/test/item/${id}`
       }
     };
 

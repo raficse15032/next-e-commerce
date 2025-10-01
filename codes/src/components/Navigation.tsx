@@ -41,11 +41,13 @@ export function Navigation() {
             </Link>
             
             {/* Products with Mega Menu */}
-            <div className="relative group">
+            <div 
+              className="relative group"
+              onMouseEnter={() => setIsMegaMenuOpen(true)}
+              onMouseLeave={() => setIsMegaMenuOpen(false)}
+            >
               <button 
                 className="nav-link text-gray-600 hover:text-primary transition-colors py-2 flex items-center space-x-1"
-                onMouseEnter={() => setIsMegaMenuOpen(true)}
-                onMouseLeave={() => setIsMegaMenuOpen(false)}
               >
                 <span>Products</span>
                 <FiChevronDown size={16} className={`transform transition-transform duration-200 ${isMegaMenuOpen ? 'rotate-180' : ''}`} />
@@ -54,11 +56,10 @@ export function Navigation() {
               {/* Mega Menu */}
               {isMegaMenuOpen && (
                 <div 
-                  className="mega-menu active absolute left-0 top-full mt-2 w-screen max-w-5xl bg-white border border-gray-200 shadow-xl rounded-lg z-50 animate-fade-in-scale"
-                  onMouseEnter={() => setIsMegaMenuOpen(true)}
-                  onMouseLeave={() => setIsMegaMenuOpen(false)}
+                  className="mega-menu active absolute left-0 top-full pt-2 w-screen max-w-5xl z-50"
                 >
-                  <div className="p-6">
+                  <div className="bg-white border border-gray-200 shadow-xl rounded-lg animate-fade-in-scale">
+                    <div className="p-6">
                     <div className="grid grid-cols-4 gap-6">
                       {/* Categories */}
                       <div>
@@ -120,6 +121,7 @@ export function Navigation() {
                         </div>
                       </div>
                     </div>
+                  </div>
                   </div>
                 </div>
               )}

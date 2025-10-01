@@ -64,7 +64,7 @@ export async function GET(
       metadata: {
         timestamp: new Date().toISOString(),
         method: request.method,
-        route: `/api/test/${category}/${id}`,
+        route: `/api/test/category/${category}/${id}`,
         categoryType: categoryInfo.type
       }
     };
@@ -119,7 +119,7 @@ export async function POST(
       metadata: {
         timestamp: new Date().toISOString(),
         method: request.method,
-        route: `/api/test/${category}/${id}`
+        route: `/api/test/category/${category}/${id}`
       }
     };
 

@@ -9,16 +9,16 @@ export async function GET() {
       example: '/api/test?name=John&age=25&tags=demo&tags=test'
     },
     {
-      path: '/api/test/[id]',
+      path: '/api/test/item/[id]',
       methods: ['GET', 'PUT', 'DELETE', 'PATCH'],
       description: 'Dynamic API with ID parameter',
-      example: '/api/test/123?fields=name,category&include=details'
+      example: '/api/test/item/123?fields=name,category&include=details'
     },
     {
-      path: '/api/test/[category]/[id]',
+      path: '/api/test/category/[category]/[id]',
       methods: ['GET', 'POST', 'PUT'],
       description: 'Category-based API with multiple parameters',
-      example: '/api/test/electronics/123?sort=price&order=desc&limit=5'
+      example: '/api/test/category/electronics/123?sort=price&order=desc&limit=5'
     }
   ];
 
@@ -37,8 +37,8 @@ export async function GET() {
     },
     examples: {
       basicQuery: '/api/test?name=value&key=data',
-      dynamicRoute: '/api/test/123',
-      categoryRoute: '/api/test/electronics/product-456',
+      dynamicRoute: '/api/test/item/123',
+      categoryRoute: '/api/test/category/electronics/product-456',
       multipleParams: '/api/test?tags=sale&tags=featured&category=electronics'
     }
   };
