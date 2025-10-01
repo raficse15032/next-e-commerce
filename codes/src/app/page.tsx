@@ -1,4 +1,29 @@
+import type { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "NextShop - Modern E-commerce Store | Quality Products & Fast Delivery",
+  description: "Discover amazing products at NextShop. Your one-stop destination for quality items with fast delivery and excellent customer service. Shop electronics, fashion, home goods and more.",
+  keywords: "e-commerce, online shopping, nextshop, quality products, fast delivery, electronics, fashion, home goods",
+  openGraph: {
+    title: "NextShop - Modern E-commerce Store",
+    description: "Your one-stop destination for quality products with fast delivery and excellent customer service.",
+    type: "website",
+    images: [
+      {
+        url: "/next.svg",
+        width: 180,
+        height: 38,
+        alt: "NextShop Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "NextShop - Modern E-commerce Store",
+    description: "Discover amazing products with fast delivery and excellent customer service.",
+  },
+};
 
 export default function Home() {
   return (
